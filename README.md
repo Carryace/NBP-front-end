@@ -217,6 +217,12 @@ As a component, to make the application code easy to understand, please have the
 ## Page Level Contribution Standard
 Page level component goes under the src/app directory, each page should have its own module and routes with unit test and e2e test applied to ensure it is functioning well.
 
+## Pull Request Submission
+For the contributors, please feel free to clone or fork our repo and create branch to play around it, but don't mess with develop branch and master branch.
+Develop branch is where you are going to send PR to, and master branch is where we will merge from develop only once in one month to ensure it is being taking a good care of.
+Please do not direct click on merge button once a Pull Request is generated. We believe the strength in numbers, so we want each PR to be carefully reviewed by our main contributors.
+We are happy to work with your PR and have in depth discussion around it, but in order to make sure our application's quality, each PR can be merged only if our main contributors approved. Thanks!
+
 # AoT Don'ts
 The following are some things that will make AoT compile fail.
 
