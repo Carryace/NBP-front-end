@@ -192,27 +192,27 @@ Configuration files live in `config/` we are currently using webpack, karma, and
 ## Naming Convention
 We are using a mix of camel case and kebab cases in this application for different purposes.
 ### Camel Case
-Use Camel Case for variable names or functions
+Use Camel Case for variable names or functions, please don't come up with really long names for them....
 
 ### Kebab Case
-Use Kebab Case only for :
-(1). Component selector name: eg. ui-drop-down
-(2). First chunk of file names: eg. ui-drop-down.component.ts
-(3). Branch names: eg. branch-purpose-....
+Use Kebab Case for :
+- Component selector name: eg. ui-drop-down
+- First chunk of file names: eg. ui-drop-down.component.ts
+- Branch names: eg. branch-purpose-....
 
 ## Testing Standard
 The goal is to let the unit test coverage to be above 80%.
-(1). For each component, it should contain a spec file with testing coverage above 60%, testing coverage under 60% is not acceptable as a component
-(2). Each component does not necessarily need e2e test, it's better to have them there anyway
-(3). Each page level component should have a module, it should have at least some e2e test in it
+- For each component, it should contain a spec file with testing coverage above 60%, testing coverage under 60% is not acceptable as a component
+- Each component does not necessarily need e2e test, it's better to have them there anyway
+- Each page level component should have a module, it should have at least some e2e test in it
 
 ## Component Level Contribution Standard
 Please add common component (widely used components) into src/ui-kit, find a correct module under ui-kit or build a new module if you believe it should belong to a new module.
 As a component, to make the application code easy to understand, please have the following files under a component level directory:
-(1). component-name.component.ts: put all the component program code into this ts file
-(2). component-name.spec.ts: add all the unit tests in it
-(3). component-name.template.html: edit html structure for the component, please do not use inline html template in component.ts
-(4). component-name.css: style file goes here
+- component-name.component.ts: put all the component program code into this ts file
+- component-name.spec.ts: add all the unit tests in it
+- component-name.template.html: edit html structure for the component, please do not use inline html template in component.ts
+- component-name.css: style file goes here
 
 ## Page Level Contribution Standard
 Page level component goes under the src/app directory, each page should have its own module and routes with unit test and e2e test applied to ensure it is functioning well.
