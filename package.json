@@ -52,7 +52,7 @@
     "server": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
     "start": "npm run server:dev",
-    "test": "npm run lint && karma start",
+    "test": "karma start",
     "tslint": "tslint",
     "typedoc": "typedoc",
     "version": "npm run build",
@@ -150,13 +150,6 @@
     "webpack-dev-server": "2.4.1",
     "webpack-dll-bundles-plugin": "^1.0.0-beta.5",
     "webpack-merge": "~3.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
   },
   "engines": {
     "node": ">= 4.2.1",

@@ -40,7 +40,7 @@ const METADATA = {
 module.exports = function (options) {
   isProd = options.env === 'production';
   return {
-
+    stats: 'errors-only',
     /*
      * Cache generated modules and chunks to improve performance for multiple incremental builds.
      * This is enabled by default in watch mode.
@@ -328,7 +328,9 @@ module.exports = function (options) {
        *
        * See: https://gist.github.com/sokra/27b24881210b56bbaff7
        */
-      new LoaderOptionsPlugin({}),
+      new LoaderOptionsPlugin({
+        options:{clientLogLevel:'error',quiet: true}
+      }),
 
       // Fix Angular 2
       new NormalModuleReplacementPlugin(

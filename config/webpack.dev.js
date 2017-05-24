@@ -39,7 +39,9 @@ const DllBundlesPlugin = require('webpack-dll-bundles-plugin').DllBundlesPlugin;
  */
 module.exports = function (options) {
   return webpackMerge(commonConfig({env: ENV}), {
-
+    stats: {
+      warnings: false
+    },
     /**
      * Developer tool to enhance debugging
      *
@@ -92,18 +94,21 @@ module.exports = function (options) {
     module: {
 
       rules: [
-       {
-         test: /\.ts$/,
-         use: [
-           {
-             loader: 'tslint-loader',
-             options: {
-               configFile: 'tslint.json'
-             }
-           }
-         ],
-         exclude: [/\.(spec|e2e)\.ts$/]
-       },
+
+          /* Can be add back to check lint, but we don't want to show it in browser console*/
+       // {
+       //   test: /\.ts$/,
+       //   use: [
+       //     {
+       //       loader: 'tslint-loader',
+       //       options: {
+       //         configFile: 'tslint.json',
+       //
+       //       }
+       //     }
+       //   ],
+       //   exclude: [/\.(spec|e2e)\.ts$/]
+       // },
 
         /*
          * css loader support for *.css files (styles directory only)
@@ -130,6 +135,8 @@ module.exports = function (options) {
       ]
 
     },
+
+
 
     plugins: [
 
@@ -198,6 +205,8 @@ module.exports = function (options) {
         { filepath: helpers.root(`dll/${DllBundlesPlugin.resolveFile('vendor')}`) }
       ]),
 
+
+
       /**
        * Plugin: NamedModulesPlugin (experimental)
        * Description: Uses file names as module name.
@@ -212,13 +221,11 @@ module.exports = function (options) {
        * See: https://gist.github.com/sokra/27b24881210b56bbaff7
        */
       new LoaderOptionsPlugin({
-        debug: true,
-        options: {
-
-        }
+        options: {}
       }),
 
     ],
+
 
     /**
      * Webpack Development Server configuration
@@ -232,6 +239,8 @@ module.exports = function (options) {
       port: METADATA.port,
       host: METADATA.host,
       historyApiFallback: true,
+      clientLogLevel: "none",
+      stats: { warnings:false},
       watchOptions: {
         aggregateTimeout: 300,
         poll: 1000
