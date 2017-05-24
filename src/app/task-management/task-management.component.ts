@@ -8,18 +8,8 @@ import {
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 
-console.log('`ChildDetail` component loaded asynchronously');
-
 @Component({
-  selector: 'child-detail',
-  template: `
-    <h1>Hello from Child Detail</h1>    
-  `,
+  selector: 'task-management',
+  templateUrl: './task-management.template.html',
 })
-export class ChildDetailComponent implements OnInit {
-
-  public ngOnInit() {
-    console.log('hello `ChildDetail` component');
-  }
-
-}
+export class TaskManagementComponent { }
