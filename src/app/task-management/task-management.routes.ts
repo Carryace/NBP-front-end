@@ -1,4 +1,4 @@
-import { TaskManagementComponent } from './task-management.component.ts';
+import { TaskManagementComponent } from './task-management.page.ts';
 import { Routes, RouterModule } from '@angular/router';
 
 export const routes = [
