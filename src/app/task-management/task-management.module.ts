@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { routing } from './task-management.routes.ts';
-import { TaskManagementComponent } from './task-management.component.ts';
+import { TaskManagementComponent } from './task-management.page.ts';
+import { UIKitModule } from "../../ui-kit/ui-kit.module";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TaskManagementComponent } from './task-management.component.ts';
     routing,
     CommonModule,
     FormsModule,
+    UIKitModule
   ],
   exports: [],
   providers:[],

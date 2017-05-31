@@ -10,6 +10,6 @@ import {
 
 @Component({
   selector: 'task-management',
-  templateUrl: './task-management.template.html',
+  templateUrl: 'task-management.template.html',
 })
 export class TaskManagementComponent { }

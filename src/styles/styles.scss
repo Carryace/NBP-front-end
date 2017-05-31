@@ -9,6 +9,12 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
+/*Set up for component scss file*/
+
+
+/*Set up for pages scss file*/
+@import "pages/task-management/task-management";
+
 nav {
   margin-top: 16px;
 }
